@@ -2925,7 +2925,7 @@ body[data-aos-easing=ease] [data-aos] {
     height: 100%;
     width: 100%;
     border-radius: inherit;
-    background-image: url(../img/shape/header-noise.png);
+    background-image: url(../img/shape/header-noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
   .header-style--two .header__wrap:after {
@@ -3529,7 +3529,7 @@ Drop Down menu end
     top: 6px;
     height: 8px;
     width: 5px;
-    background-image: url(../img/icon/polygon-icon.png);
+    background-image: url(../img/icon/polygon-icon.webp);
     background-repeat: no-repeat;
     background-size: cover; }
 
@@ -3999,7 +3999,7 @@ Drop Down menu end
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-image: url(../img/service/noise.png);
+    background-image: url(../img/service/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
 
@@ -4052,7 +4052,7 @@ Drop Down menu end
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-image: url(../img/brand/noise.png);
+    background-image: url(../img/brand/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
   .brand-sub-title p {
@@ -4152,7 +4152,7 @@ Drop Down menu end
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-image: url(../img/brand/noise02.png);
+    background-image: url(../img/brand/noise02.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -4254,7 +4254,7 @@ Drop Down menu end
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-image: url(../img/service/noise.png);
+    background-image: url(../img/service/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
   .xb-industries-item:hover .xb-icon img {
@@ -4532,7 +4532,6 @@ Drop Down menu end
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-image: url(../img/project/noise.png);
     background-repeat: no-repeat;
     background-size: cover; }
 .xb-project-content .xb-item--title {
@@ -4930,7 +4929,6 @@ Drop Down menu end
     height: 100%;
     width: 100%;
     border-radius: inherit;
-    background-image: url(../img/process/noise.png);
     background-repeat: no-repeat;
     background-size: cover; }
   .xb-process-step .xb-img {
@@ -5087,7 +5085,7 @@ Drop Down menu end
       height: 100%;
       width: 100%;
       border-radius: inherit;
-      background-image: url(../img/pricing/tag-noise.png);
+      background-image: url(../img/pricing/tag-noise.webp);
       background-repeat: no-repeat;
       background-size: cover; }
   .pricing-item .premium-plan {
@@ -5194,7 +5192,7 @@ Drop Down menu end
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-image: url(../img/integration/bg.png);
+    background-image: url(../img/integration/bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -5379,7 +5377,7 @@ Drop Down menu end
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-image: url(../img/integration/bg.png);
+    background-image: url(../img/integration/bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -5665,7 +5663,7 @@ Drop Down menu end
       width: 90px;
       height: 100px; } }
   .award-logo::before {
-    background-image: url(../img/award/bg.png); }
+    background-image: url(../img/award/bg.webp); }
   @media only screen and (max-width: 1023px) {
     .award-logo img {
       max-width: 70%; } }
@@ -5702,7 +5700,7 @@ Drop Down menu end
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-image: url(../img/award/net-img.png);
+    background-image: url(../img/award/net-img.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
@@ -6213,7 +6211,7 @@ Drop Down menu end
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-image: url(../img/about/net-img.png);
+    background-image: url(../img/about/net-img.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
@@ -6319,7 +6317,7 @@ Drop Down menu end
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-image: url(../img/service/noise.png);
+    background-image: url(../img/service/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
   .xb-service-item::after {
@@ -6848,7 +6846,6 @@ Drop Down menu end
       height: 100%;
       width: 100%;
       border-radius: inherit;
-      background-image: url(../img/feature/noise.png);
       background-repeat: no-repeat;
       background-size: cover; }
   .xb-feature-item .xb-item--icon {
@@ -7550,7 +7547,7 @@ Drop Down menu end
     height: 100%;
     width: 100%;
     border-radius: inherit;
-    background-image: url(../img/blog/noise.png);
+    background-image: url(../img/blog/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
   .blog_details_item:not(:last-child) {
@@ -7643,7 +7640,7 @@ Drop Down menu end
       height: 100%;
       width: 100%;
       border-radius: inherit;
-      background-image: url(../img/blog/noise.png);
+      background-image: url(../img/blog/noise.webp);
       background-repeat: no-repeat;
       background-size: cover; }
     .blog-pagination li a:not(:last-child) {
@@ -7727,7 +7724,7 @@ Drop Down menu end
       height: 100%;
       width: 100%;
       border-radius: inherit;
-      background-image: url(../img/blog/noise.png);
+      background-image: url(../img/blog/noise.webp);
       background-repeat: no-repeat;
       background-size: cover; }
     .post_audio .audio_play_btn::after {
@@ -7818,7 +7815,7 @@ Drop Down menu end
     height: 100%;
     width: 100%;
     border-radius: inherit;
-    background-image: url(../img/blog/noise.png);
+    background-image: url(../img/blog/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
   .postabmin_block .admin_image {
@@ -7901,7 +7898,7 @@ Drop Down menu end
       height: 100%;
       width: 100%;
       border-radius: inherit;
-      background-image: url(../img/blog/noise.png);
+      background-image: url(../img/blog/noise.webp);
       background-repeat: no-repeat;
       background-size: cover; }
     .social_icons_block li a::after {
@@ -7950,7 +7947,7 @@ Drop Down menu end
     height: 100%;
     width: 100%;
     border-radius: inherit;
-    background-image: url(../img/blog/noise.png);
+    background-image: url(../img/blog/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
   @media only screen and (min-width: 1200px) and (max-width: 1300px) {
@@ -8020,7 +8017,7 @@ Drop Down menu end
       height: 100%;
       width: 100%;
       border-radius: inherit;
-      background-image: url(../img/blog/noise.png);
+      background-image: url(../img/blog/noise.webp);
       background-repeat: no-repeat;
       background-size: cover; }
     .post-nav-item .xb-item--arrow span::after {
@@ -8069,7 +8066,7 @@ Drop Down menu end
     height: 100%;
     width: 100%;
     border-radius: inherit;
-    background-image: url(../img/blog/noise.png);
+    background-image: url(../img/blog/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
   @media (max-width: 767px) {
@@ -8104,7 +8101,7 @@ Drop Down menu end
       height: 100%;
       width: 100%;
       border-radius: inherit;
-      background-image: url(../img/blog/noise.png);
+      background-image: url(../img/blog/noise.webp);
       background-repeat: no-repeat;
       background-size: cover; }
     .item_details-newslatter .xb-item--bell-icon::after {
@@ -8359,7 +8356,7 @@ Drop Down menu end
       z-index: -1;
       height: 100%;
       width: 100%;
-      background-image: url(../img/testimonial/noise.png);
+      background-image: url(../img/testimonial/noise.webp);
       background-repeat: no-repeat;
       background-size: cover; }
     .comment_item .comment_reply_btn:after {
@@ -9019,7 +9016,7 @@ Drop Down menu end
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-image: url(../img/testimonial/noise.png);
+    background-image: url(../img/testimonial/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
 .xb-blog-item .xb-item--holder {
@@ -9202,7 +9199,7 @@ Drop Down menu end
             width: 100%;
             z-index: -1;
             border-radius: inherit;
-            background-image: url(../img/bg/circle_bg.png);
+            background-image: url(../img/bg/circle_bg.webp);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center; }
@@ -9438,7 +9435,7 @@ Drop Down menu end
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-image: url(../img/contact/noise.png);
+    background-image: url(../img/contact/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
   .xb-contact-form .title {
@@ -9916,7 +9913,7 @@ Drop Down menu end
     height: 100%;
     width: 100%;
     border-radius: inherit;
-    background-image: url(../img/blog/noise.png);
+    background-image: url(../img/blog/noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
   .recent_post_block .recent_post_item:not(:last-child) {
@@ -9999,7 +9996,7 @@ Drop Down menu end
       height: 100%;
       width: 100%;
       border-radius: inherit;
-      background-image: url(../img/blog/noise.png);
+      background-image: url(../img/blog/noise.webp);
       background-repeat: no-repeat;
       background-size: cover; }
     .tags_block li a:after {
@@ -10675,7 +10672,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       height: 100%;
       width: 100%;
       z-index: 1;
-      background-image: url(../img/bg/hero-gradient.png);
+      background-image: url(../img/bg/hero-gradient.webp);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover; }
@@ -12069,7 +12066,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     height: 100%;
     width: 100%;
     border-radius: inherit;
-    background-image: url(../img/shape/footer-noise.png);
+    background-image: url(../img/shape/footer-noise.webp);
     background-repeat: no-repeat;
     background-size: cover; }
 
@@ -12217,7 +12214,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       width: 100%;
       z-index: -1;
       border-radius: inherit;
-      background-image: url(../img/bg/social_bg.png);
+      background-image: url(../img/bg/social_bg.webp);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center; }
@@ -12343,7 +12340,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   .ai-footer-heading .title {
     font-size: 330px;
     line-height: 2;
-    background: url("../img/bg/footer-heading-bg.jpg");
+    background: url("../img/bg/footer-heading-bg.webp");
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
