@@ -13188,4 +13188,26 @@ color:#00ff97;
 
 .xb-process-right-container{
     padding-left:80px;
+
 }
+
+/* Chrome, Edge, Safari scrollbar */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#00020f;
+}
+
+::-webkit-scrollbar-thumb{
+background:linear-gradient(180deg,#00ff97,#1b7fff);
+border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#00ff97;
+}
+
+
