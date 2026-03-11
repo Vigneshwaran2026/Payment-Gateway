@@ -230,6 +230,88 @@ grid-template-columns:1fr;
 }
 
 }
+
+/* Tablet */
+@media (max-width:992px){
+
+.consumer-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.business-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+.consumer-section{
+padding:60px 20px;
+}
+
+.solution-title h2{
+font-size:28px;
+}
+
+.solution-title p{
+font-size:14px;
+}
+
+.consumer-grid{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.consumer-card{
+padding:25px;
+text-align:center;
+}
+
+.consumer-card .icon{
+font-size:30px;
+}
+
+.business-section{
+padding:60px 20px;
+}
+
+.business-title h2{
+font-size:30px;
+}
+
+.business-title p{
+font-size:14px;
+}
+
+.business-grid{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+.business-item{
+flex-direction:column;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.business-icon{
+width:55px;
+height:55px;
+font-size:22px;
+}
+
+.business-content h3{
+font-size:18px;
+}
+
+.business-content p{
+font-size:14px;
+}
+
+}
     </style>
 
 </head>
@@ -708,3 +790,4 @@ document.getElementById("newsletterForm").addEventListener("submit", function(e)
 
 </body>
 </html>
+
