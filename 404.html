@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly - 404</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(120deg,#020c2b,#021a44,#001d3d);
+color:white;
+}
+
+/* Glass container */
+
+/* Animated Gradient Border */
+
+.error-box{
+position:relative;
+width:900px;
+max-width:90%;
+padding:35px 45px;
+border-radius:60px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+display:flex;
+align-items:center;
+justify-content:space-between;
+overflow:hidden;
+}
+
+/* Gradient moving border */
+
+.error-box::before{
+content:"";
+position:absolute;
+inset:-2px;
+border-radius:60px;
+
+background:linear-gradient(
+90deg,
+#22c55e,
+#06b6d4,
+#3b82f6,
+#06b6d4,
+#22c55e
+);
+
+background-size:300%;
+animation:borderMove 6s linear infinite;
+z-index:-1;
+}
+
+/* Inner background */
+
+.error-box::after{
+content:"";
+position:absolute;
+inset:2px;
+border-radius:58px;
+background:linear-gradient(120deg,#020c2b,#021a44,#001d3d);
+z-index:-1;
+}
+
+/* Border animation */
+
+@keyframes borderMove{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:300% 50%;
+}
+
+}
+
+html,body{
+overflow:hidden;
+width:100%;
+}
+
+/* Logo */
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+height:70px;
+}
+
+/* Right content */
+
+.error-content{
+text-align:right;
+}
+
+.error-content h1{
+font-size:90px;
+background:linear-gradient(90deg,#22c55e,#06b6d4);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.error-content p{
+font-size:18px;
+opacity:0.8;
+margin-bottom:20px;
+}
+
+/* Button */
+
+/* Modern Gradient Button */
+
+.home-btn{
+position:relative;
+display:inline-block;
+padding:14px 34px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+color:white;
+overflow:hidden;
+background:linear-gradient(90deg,#22c55e,#06b6d4,#3b82f6);
+background-size:200%;
+transition:all .4s ease;
+}
+
+/* Hover Animation */
+
+.home-btn:hover{
+transform:translateY(-4px) scale(1.05);
+background-position:right;
+box-shadow:
+0 10px 25px rgba(6,182,212,0.5),
+0 0 20px rgba(34,197,94,0.6);
+}
+
+/* Glow Border Effect */
+
+.home-btn::before{
+content:"";
+position:absolute;
+top:-2px;
+left:-2px;
+right:-2px;
+bottom:-2px;
+background:linear-gradient(90deg,#22c55e,#06b6d4,#3b82f6);
+border-radius:40px;
+z-index:-1;
+opacity:0;
+transition:0.4s;
+filter:blur(8px);
+}
+
+.home-btn:hover::before{
+opacity:1;
+}
+
+/* Click animation */
+
+.home-btn:active{
+transform:scale(.96);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.error-box{
+flex-direction:column;
+text-align:center;
+gap:25px;
+border-radius:25px;
+}
+
+.error-content{
+text-align:center;
+}
+
+.error-content h1{
+font-size:70px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="error-box">
+
+<div class="logo">
+<img src="assets/img/logo/logo.webp" alt="Stackly Logo">
+</div>
+
+<div class="error-content">
+
+<h1>404</h1>
+
+<p>Oops! The page you're looking for doesn't exist.</p>
+
+<a href="index.html" class="home-btn">Back to Home</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
