@@ -98,7 +98,43 @@ height:auto;
 max-width:560px;
 }
 
+.hero-content--two .hero-title{
+font-size:72px;
+line-height:1.05;
+margin-top:-40px;   /* moves title slightly up */
+letter-spacing:-2px;
+}
 
+@media (max-width:768px){
+
+.hero-content--two .hero-title{
+font-size:40px;
+margin-top:10px;
+}
+
+}
+
+.hero-subtitle{
+font-size:18px;
+line-height:1.8;
+color:rgba(188, 184, 184, 0.6) !important;
+max-width:520px;
+margin-top:20px;
+margin-bottom:35px;
+font-weight:400;
+letter-spacing:0.2px;
+}
+
+
+@media(max-width:768px){
+
+.hero-subtitle{
+font-size:16px;
+line-height:1.7;
+max-width:100%;
+}
+
+}
   </style>
 </head>
 
@@ -234,8 +270,9 @@ Login
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="hero-content hero-content--two">
-               <h2 class="title scale-animation wow">
-Accept secure <br>  online payments
+             <h2 class="title hero-title scale-animation wow">
+Accept secure online <br>
+payments
 </h2>
                             <p class="sub-title scale-animation wow">Enable fast, secure, and seamless payments on your website.Accept UPI, credit cards, debit cards, net banking, and digital wallets with a reliable payment gateway designed to grow your business. </p>
                             <div class="hero-btn scale-animation wow">

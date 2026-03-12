@@ -24,43 +24,370 @@
     <link rel="stylesheet" href="assets/css/main.css">
 
     <style>
-        .hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.35); /* overlay darkness */
-z-index:1;
-}
-
-.hero-video{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-overflow:hidden;
-z-index:0;
-}
-
-.video-bg{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.hero-center{
-padding:100px 0 120px 0; /* moved slightly up */
-color:#fff;
+      .hero{
+height:100vh;
+display:flex;
+align-items:center;
+padding:120px 8% 0;
+background:linear-gradient(120deg,#0f5a67,#0c3c4c);
 position:relative;
-z-index:2;
+overflow:hidden;
 }
 
-.hero-content h2,
-.hero-content p{
-text-shadow:0 3px 10px rgba(0,0,0,0.6);
+.hero-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+width:100%;
+}
+
+/* LEFT CONTENT */
+
+.hero-left{
+max-width:550px;
+animation:fadeUp 1.2s ease;
+}
+
+.hero-left span{
+letter-spacing:3px;
+font-size:14px;
+color:#9deaff;
+}
+
+.hero-left h1{
+font-size:60px;
+margin:15px 0;
+background:linear-gradient(90deg,#19ffb3,#38bdf8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-left p{
+color:#c6f2ff;
+line-height:1.7;
+margin-bottom:35px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:nowrap;
+}
+
+.hero-buttons a{
+white-space:nowrap;
+}
+.hero-buttons{
+display:flex;
+gap:25px;
+margin-top:30px;
+}
+
+.btn-main,
+.btn-outline{
+padding:14px 32px;
+border-radius:40px;
+font-weight:600;
+font-size:15px;
+white-space:nowrap;
+}
+
+.btn-main{
+padding:13px 30px;
+border-radius:30px;
+background:linear-gradient(90deg,#19ffb3,#38bdf8);
+color:#00333b;
+font-weight:600;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn-main:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 25px rgba(0,0,0,.4);
+}
+
+.btn-outline{
+padding:13px 30px;
+border-radius:30px;
+border:2px solid #38bdf8;
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn-outline:hover{
+background:linear-gradient(90deg,#19ffb3,#38bdf8);
+color:#00333b;
+}
+
+/* RIGHT SIDE */
+
+.hero-right{
+position:relative;
+width:520px;
+height:420px;
+}
+
+/* IMAGE SLIDER */
+
+.hero-slider{
+width:100%;
+height:100%;
+position:absolute;
+}
+
+.hero-slider img{
+width:100%;
+margin-top: -40px;
+position:absolute;
+opacity:0;
+transition:1s;
+}
+
+.hero-slider img.active{
+opacity:1;
+}
+
+/* FLOAT CARDS */
+
+.card{
+position:absolute;
+padding:14px 22px;
+background:linear-gradient(90deg,#19ffb3,#38bdf8);
+border-radius:10px;
+color:#00333b;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:10px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+animation:float 4s infinite ease-in-out;
+}
+
+.card1{
+top:30px;
+left:-40px;
+}
+
+.card2{
+bottom:50px;
+right:-30px;
+animation-delay:1s;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+100%{transform:translateY(0)}
+}
+
+/* TEXT ANIMATION */
+
+@keyframes fadeUp{
+0%{
+opacity:0;
+transform:translateY(30px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ================= MOBILE FIX ================= */
+
+@media (max-width:768px){
+
+.hero{
+height:auto;
+padding:110px 20px 60px;
+}
+
+.hero-container{
+flex-direction:column;
+text-align:center;
+gap:30px;
+}
+
+/* IMAGE AREA */
+
+.hero-right{
+width:100%;
+height:320px;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* IMAGE */
+
+.hero-slider img{
+width:85%;
+max-width:320px;
+position:relative;
+margin:0 auto;
+}
+
+/* CARD DESIGN */
+
+.card{
+position:absolute;
+width:170px;
+padding:10px 12px;
+font-size:14px;
+border-radius:14px;
+text-align:center;
+justify-content:center;
+}
+
+/* TOP LEFT CARD */
+
+.card1{
+top:0;
+left:10px;
+}
+
+/* BOTTOM RIGHT CARD */
+
+.card2{
+bottom:0;
+right:10px;
+}
+
+/* ICON SIZE */
+
+.card i{
+font-size:14px;
+margin-bottom:4px;
+}
+
+/* REDUCE FLOAT ANIMATION */
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-8px)}
+100%{transform:translateY(0)}
+}
+
+}
+
+/* MOBILE CONTENT FIX */
+
+@media (max-width:768px){
+
+.hero-left{
+max-width:100%;
+padding:0 10px;
+}
+
+/* SMALLER TITLE */
+
+.hero-left h1{
+font-size:36px;
+line-height:1.2;
+word-break:break-word;
+}
+
+/* SUB TITLE */
+
+.hero-left span{
+font-size:12px;
+letter-spacing:2px;
+}
+
+/* PARAGRAPH */
+
+.hero-left p{
+font-size:14px;
+line-height:1.6;
+padding:0 5px;
+}
+
+/* BUTTON LAYOUT */
+
+.hero-buttons{
+flex-direction:column;
+align-items:center;
+gap:15px;
+}
+
+/* BUTTON SIZE */
+
+.hero-buttons a{
+width:90%;
+max-width:260px;
+text-align:center;
+}
+
+}
+
+/* ================= MOBILE HERO FIX ================= */
+
+@media (max-width:768px){
+
+/* HERO IMAGE AREA */
+
+.hero-right{
+width:100%;
+height:300px;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+/* SLIDER */
+
+.hero-slider{
+width:100%;
+height:100%;
+position:relative;
+}
+
+/* IMAGES */
+
+.hero-slider img{
+width:85%;
+max-width:320px;
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+opacity:0;
+transition:0.6s ease;
+}
+
+.hero-slider img.active{
+opacity:1;
+}
+
+/* CARDS */
+
+.card{
+width:160px;
+padding:10px;
+font-size:13px;
+}
+
+/* CARD POSITION */
+
+.card1{
+top:10px;
+left:10px;
+}
+
+.card2{
+bottom:10px;
+right:10px;
+}
+
 }
 
 .payment-hero{
@@ -1091,77 +1418,60 @@ Login
         
     <!-- main area start -->
     <main>
-        <!-- hero start -->
-<section class="hero hero-style hero-style--two pos-rel">
+<section class="hero">
 
-<!-- VIDEO BACKGROUND -->
-<div class="hero-video">
-<video autoplay muted loop playsinline class="video-bg">
-<source src="assets/img/payment/background.mp4" type="video/mp4">
-</video>
-</div>
+<div class="hero-container">
 
-<div class="container">
-<div class="row justify-content-center">
-<div class="col-lg-8">
+<!-- LEFT CONTENT -->
 
-<div class="hero-content hero-center text-center">
+<div class="hero-left">
 
-<h2 class="title wow fadeInUp">
-Accept Secure Online Payments
-</h2>
+<span>SMART BUSINESS PLATFORM</span>
 
-<p class="sub-title wow fadeInUp" data-wow-delay="0.2s">
-Enable fast, secure, and seamless payments on your website. Accept UPI,
-credit cards, debit cards, net banking, and digital wallets with a
-reliable payment gateway designed to grow your business.
+<h1>Secure Digital Payments</h1>
+
+<p>
+Stackly provides powerful payment solutions designed for businesses
+that want faster transactions, reliable security and seamless
+financial management across platforms.
 </p>
 
-<div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
+<div class="hero-buttons">
 
- <a class="thm-btn chatbot-btn" href="404-2.html">
-                                    Start Accepting Payments
-                                    <span class="arrow-icon">
-                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="../../www.w3.org/2000/svg.html">
-                                        <rect x="5.06592" y="19.9785" width="20.5712" height="2.61221" transform="rotate(-40.2798 5.06592 19.9785)" fill="white" />
-                                        <rect x="7.97095" y="7.24463" width="2.61221" height="2.61221" transform="rotate(-40.2798 7.97095 7.24463)" fill="white" />
-                                        <rect x="11.6523" y="7.54834" width="2.61221" height="2.61221" transform="rotate(-40.2798 11.6523 7.54834)" fill="white" />
-                                        <rect x="15.334" y="7.85205" width="2.61221" height="2.61221" transform="rotate(-40.2798 15.334 7.85205)" fill="white" />
-                                        <rect x="18.7119" y="11.8374" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.7119 11.8374)" fill="white" />
-                                        <rect x="18.4084" y="15.52" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.4084 15.52)" fill="white" />
-                                        <rect x="18.104" y="19.2012" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.104 19.2012)" fill="white" />
-                                        </svg>
-                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="../../www.w3.org/2000/svg.html">
-                                        <rect x="5.06592" y="19.9785" width="20.5712" height="2.61221" transform="rotate(-40.2798 5.06592 19.9785)" fill="white" />
-                                        <rect x="7.97095" y="7.24463" width="2.61221" height="2.61221" transform="rotate(-40.2798 7.97095 7.24463)" fill="white" />
-                                        <rect x="11.6523" y="7.54834" width="2.61221" height="2.61221" transform="rotate(-40.2798 11.6523 7.54834)" fill="white" />
-                                        <rect x="15.334" y="7.85205" width="2.61221" height="2.61221" transform="rotate(-40.2798 15.334 7.85205)" fill="white" />
-                                        <rect x="18.7119" y="11.8374" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.7119 11.8374)" fill="white" />
-                                        <rect x="18.4084" y="15.52" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.4084 15.52)" fill="white" />
-                                        <rect x="18.104" y="19.2012" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.104 19.2012)" fill="white" />
-                                        </svg>
-                                    </span>
-                                    <span class="btn-bg">
-                                        <svg width="484" height="60" viewBox="0 0 484 60" fill="none" preserveAspectRatio="none" xmlns="../../www.w3.org/2000/svg.html">
-                                        <rect width="484" height="60" fill="url(#paint0_radial_2224_3384)"/>
-                                        <defs>
-                                            <radialGradient id="paint0_radial_2224_3384" cx="0" cy="0" r="1" gradientTransform="matrix(-667.5 -25 0.582116 -49.7476 497 39)" gradientUnits="userSpaceOnUse">
-                                            <stop offset="0" stop-color="#00FF97" />
-                                            <stop offset="1" stop-color="#00020F" stop-opacity="0" />
-                                            </radialGradient>
-                                        </defs>
-                                        </svg>
-                                    </span>
-                                </a>
+<a href="404-2.html" class="btn-main">Start Accepting Payments</a>
+
+<a href="404-2.html" class="btn-outline">Explore Features</a>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="hero-right">
+
+<div class="hero-slider">
+
+<img src="assets/img/payment/slide1.webp" class="active">
+<img src="assets/img/payment/slide2.webp">
+<img src="assets/img/payment/slide3.webp">
+
+</div>
+
+<div class="card card1">
+<i class="fa-solid fa-shield-halved"></i>
+Secure Transactions
+</div>
+
+<div class="card card2">
+<i class="fa-solid fa-bolt"></i>
+Instant Payments
 </div>
 
 </div>
 
 </div>
-</div>
-</div>
-
-<div class="hero-linear"></div>
 
 </section>
 <!-- hero end -->
@@ -1983,6 +2293,29 @@ document.getElementById("newsletterForm").addEventListener("submit", function(e)
 
 <!-- Main custom script -->
 <script src="assets/js/main.js"></script>
+
+<script>
+
+let slides=document.querySelectorAll(".hero-slider img");
+let index=0;
+
+function slideShow(){
+
+slides[index].classList.remove("active");
+
+index++;
+
+if(index>=slides.length){
+index=0;
+}
+
+slides[index].classList.add("active");
+
+}
+
+setInterval(slideShow,3500);
+
+</script>
 
 </body>
 </html>
