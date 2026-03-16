@@ -502,55 +502,6 @@
 		pauseOnHover: false,
 		startVisible: true,
 	});	
-
-	/*------------------------------------------
-	= Language Select
-	-------------------------------------------*/
-	const locales = ["en-GB","ar-SA","zh-CN","de-DE","es-ES","fr-FR","hi-IN","it-IT","in-ID","ja-JP","ko-KR","nl-NL","no-NO","pl-PL","pt-BR","sv-SE","fi-FI","th-TH","tr-TR","uk-UA","vi-VN","ru-RU","he-IL"];
-
-	function getFlagSrc(countryCode) {
-		return /^[A-Z]{2}$/.test(countryCode)
-		? `https://flagsapi.com/${countryCode.toUpperCase()}/shiny/64.png`
-		: "";
-	}
-
-	$(document).ready(function () {
-		function setSelectedLocale(locale) {
-		const intlLocale = new Intl.Locale(locale);
-
-		const $dropdownContent = $("#language_dropdown > ul");
-		$dropdownContent.empty();
-
-		const otherLocales = locales.filter(loc => loc !== locale);
-		$.each(otherLocales, function (index, otherLocale) {
-			const otherIntlLocale = new Intl.Locale(otherLocale);
-			const otherLangName = new Intl.DisplayNames([otherLocale], { type: "language" }).of(otherIntlLocale.language);
-
-			const $listEl = $("<li>").html(`${otherLangName} <img src="${getFlagSrc(otherIntlLocale.region)}" />`);
-			$listEl.val(otherLocale);
-
-			$listEl.on("mousedown", function () {
-			setSelectedLocale(otherLocale);
-			});
-
-			$dropdownContent.append($listEl);
-		});
-
-		$("#language_active_btn").html(`<span><img src="${getFlagSrc(intlLocale.region)}" /></span> <i class="fa-solid fa-angle-down"></i>`);
-		}
-
-		setSelectedLocale(locales[0]);
-
-		const browserLang = new Intl.Locale(navigator.language).language;
-		$.each(locales, function (index, locale) {
-		const localeLang = new Intl.Locale(locale).language;
-		if (localeLang === browserLang) {
-			setSelectedLocale(locale);
-		return false; // Break loop
-		}
-	});
-	});
-
 	/*------------------------------------------
 	= process trigger
 	-------------------------------------------*/
