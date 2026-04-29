@@ -42,42 +42,34 @@
 	= sticky header
 	-------------------------------------------*/
 	function stickyHeader() {
-		var scrollDirection = "";
-		var lastScrollPosition = 0;
 
-		// Clone and make header sticky if the element with class 'xb-header' exists
-		if ($('.xb-header').length) {
-			$('.xb-header').addClass('original').clone(true).insertAfter('.xb-header').addClass('xb-header-area-sticky xb-sticky-stt').removeClass('original');
-		}
+    // Clone header (same as your code)
+    if ($('.xb-header').length) {
+        $('.xb-header')
+            .addClass('original')
+            .clone(true)
+            .insertAfter('.xb-header')
+            .addClass('xb-header-area-sticky')
+            .removeClass('original');
+    }
 
-		// Handle scroll events
-		$(window).on("scroll", function () {
-			var currentScrollPosition = $(window).scrollTop();
+    // Scroll event
+    $(window).on("scroll", function () {
+        var scrollTop = $(window).scrollTop();
 
-			// Determine scroll direction
-			scrollDirection = currentScrollPosition < lastScrollPosition ? "up" : "down";
-			lastScrollPosition = currentScrollPosition;
+        if ($("#xb-header-area").hasClass("is-sticky")) {
 
-			// Check if element with ID 'xb-header-area' has class 'is-sticky'
-			if ($("#xb-header-area").hasClass("is-sticky")) {
-				// Add or remove classes based on scroll position for sticky header and mobile header
-				if (lastScrollPosition > 100) {
-					$(".xb-header-area-sticky.xb-sticky-stb").addClass("xb-header-fixed");
-				} else {
-					$(".xb-header-area-sticky.xb-sticky-stb").removeClass("xb-header-fixed");
-				}
+            if (scrollTop > 100) {
+                $(".xb-header-area-sticky").addClass("xb-header-fixed");
+            } else {
+                $(".xb-header-area-sticky").removeClass("xb-header-fixed");
+            }
 
-				// Add or remove classes for sticky header based on scroll direction
-				if (scrollDirection === "up" && lastScrollPosition > 100) {
-					$(".xb-header-area-sticky.xb-sticky-stt").addClass("xb-header-fixed");
-				} else {
-					$(".xb-header-area-sticky.xb-sticky-stt").removeClass("xb-header-fixed");
-				}
-			}
-		});
-	}
-	stickyHeader();
+        }
+    });
+}
 
+stickyHeader();
 	/*------------------------------------------
 	= header search
 	-------------------------------------------*/
